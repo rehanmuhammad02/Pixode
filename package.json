@@ -1,0 +1,25 @@
+{
+    "name":  "pixode-studio",
+    "private":  true,
+    "type":  "module",
+    "scripts":  {
+                    "start":  "npm run build \u0026\u0026 php artisan serve --host=127.0.0.1 --port=3000",
+                    "dev":  "node resources/scripts/dev.mjs",
+                    "dev:assets":  "vite --host 127.0.0.1",
+                    "build":  "vite build",
+                    "check":  "php artisan test \u0026\u0026 npm run build",
+                    "test":  "php artisan test",
+                    "migrate":  "php artisan migrate",
+                    "setup":  "composer install \u0026\u0026 npm install \u0026\u0026 php artisan migrate \u0026\u0026 php artisan pixode:import \u0026\u0026 npm run build"
+                },
+    "dependencies":  {
+                         "lucide-react":  "^1.52.0",
+                         "react":  "^19.3.0",
+                         "react-dom":  "^19.3.0",
+                         "react-router-dom":  "^7.18.4"
+                     },
+    "devDependencies":  {
+                            "@vitejs/plugin-react":  "^6.1.2",
+                            "vite":  "^8.3.3"
+                        }
+}
